@@ -1,7 +1,11 @@
 
 from abc import ABC, abstractmethod
 
-class Replay(ABC):        
+class Replay(ABC):
+
+    def append(self, *args, **kwargs):
+        self.insert(*args, **kwargs)
+       
     @abstractmethod
     def insert(self, data):
         pass
